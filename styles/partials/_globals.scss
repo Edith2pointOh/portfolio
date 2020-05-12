@@ -1,0 +1,79 @@
+*  
+    { 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+    font: inherit;
+    vertical-align: baseline;
+    font-size: 100%;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+    line-height:1.5;
+    color:#222;
+    background:#fff;
+    font-family: 'Raleway', sans-serif;
+    padding-top:30px;
+}
+
+.wrapper {
+    max-width: 1200px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight:normal;
+    color:#111; 
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 
+    { 
+    font-size: 2.6rem; 
+    line-height:1;
+    margin-bottom:0.5rem
+} 
+     
+h2 
+    { 
+    font-size: 1.9rem; 
+    margin-bottom:0.75em;    
+} 
+     
+h3 
+    { 
+    font-size: 1.4rem; 
+    line-height:1rem;
+    margin-bottom:1rem
+} 
+     
+h4 
+    { 
+    font-size: 1.1rem;  
+    line-height:1.25;
+    margin-bottom:1.25rem
+} 
+     
+h5 
+    { 
+    font-size: 1rem; 
+    margin-bottom:1.5rm    
+} 
+
+     
+p { 
+    font-size: 1rem;  
+    // margin:0 0 1.5rem;
+    line-height:1.65rem;   
+}
+
+img {
+    object-fit: scale-down;
+}
