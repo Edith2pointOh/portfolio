@@ -1,53 +1,117 @@
-.body-wrapper{
-    width: 75%;
-    margin: 0 auto;
-}
+
 
 .about-studies{
     display: flex;
-    padding-right: 10px;
+    padding: 30px 0;
     align-items: center;
 
 }
 
 .about-me {
     width: 50%;
+    padding-right: 15px;
+
+    h3, h5 {
+        text-align: center;
+    }
+
 }
+
+.dotted-line-box-wrapper {
+
+    position: relative;
+    background: linear-gradient(to bottom right, red, $blue, $yellow);
+    padding: 3px;
+
+    .dotted-line-box {
+    // border: 2px solid red;
+    background: #222;
+    color: white;
+    padding: 2rem;
+    margin: 0 auto;
+    
+
+    h5 {
+        text-align: left;
+        margin-bottom: .2rem;
+    }
+}
+
+}
+
 
 // Studies 
 
 .studies {
     width: 50%;
     padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        text-align: center;
+    }
+
+    h5 {
+        margin-bottom: .2rem;
+        font-size: 1rem;
+    }
 
 }
 
-.studies1 {
-    border: 2px solid $blue;
-    width: 50%;
+.outter-studies1 {
+    width: 100%;
+    display: flex;
+
+    .studies1 {
+    border: 2px solid $green;
+    width: 45%;
+    padding-left: 7px;
+    border-radius: 3%;
+   
+
+    .dot1 {
+       @include dot();
+       color: $green;
+    }
+}
+
+
 }
 
 .studies2 {
-    border: 2px solid $pink;
-    width: 50%;
+    border: 2px solid $blueX;
+    width: 45%;
+    align-self: flex-end;
+    padding-left: 7px;
+    border-radius: 3%;
+
+
 }
 
 .studies3 {
-    border: 2px solid $purple;
-    width: 50%;
+    border: 2px solid $orange;
+    width: 45%;
+    padding-left: 7px;
+    border-radius: 3%;
+
+
 }
 
 .studies4 {
-    border: 2px solid $green;
-    width: 50%;
+    border: 2px solid $pink;
+    width: 45%;
+    align-self: flex-end;
+    padding-left: 7px;
+    border-radius: 3%;
+
+
+
 }
 
 .skillz {
-    background-color: $lightGrey;
     background-color: $yellow;
-    padding: 20px 0;
-
-   
+    padding: 20px 0; 
 }
 
 .skillz-flex {
@@ -60,24 +124,91 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-content: center;
+    // align-content: center;
+    text-align: center;
 
      img {
         height: 100px;
+        // -webkit-filter: drop-shadow( 3px 1px 1px rgba(0, 0, 0, .7));
+        // filter: drop-shadow( 2px 1px 1px rgba(255, 240, 255, .7));
+        @include dropShadow();
     }
 
     h5 {
         margin-top: 5px;
         font-weight: bolder;
     }
+}
 
+.wordpress path {
+  fill: #ff0000;
+}
+
+.portfolio-section {
+    padding: 30px 0;
 }
 
 .project1 {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    width: 100%;
 
-    .project1-image {
+    .outer-video-div {
+        position: relative;
+        width: 50%;
+        height: auto;
+
+        .project1-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .project1-image i {
+            font-size: 350%;
+            position: absolute;
+            bottom: 30%;
+            left: 70%;
+            color: $pink;
+            // @include dropShadow();
+            @include pulse;
+        }
+    }
+
+    .project1-text {
+        width: 50%;
+        justify-self: center;
+        align-items: center;
+
+        h4 {
+            // border-top: 2px solid red;
+            // border-bottom: 2px solid red;
+            max-height: 25px;
+            color: white;
+            border-width: 3px;
+            border-style: solid;
+            border-image: 
+                linear-gradient(to right, 
+                    red, 
+            rgba(0, 0, 0, 0)
+        ) 1 100%;
+        }
+
+        .portfolio-btn {
+        width: 100px;
+        height: 30px;
+        background-color: $pink;
+        margin: 20px 10px 0 0;
+        color: $sweetPink;
+        }
+        
+    }
+}
+
+.project2, .project3 {
+    display: flex;
+    align-items: center;
+
+    .project2-image, .project3-image {
         width: 50%;
 
         img {
@@ -85,24 +216,79 @@
             height: auto;
         }
     }
+
+    .project1-text, .project2-text, .project3-text {
+        width: 50%;
+        justify-self: center;
+        align-items: center;
+
+        .portfolio-btn {
+        width: 100px;
+        height: 30px;
+        background-color: $pink;
+        margin: 20px 10px 0 0;
+        color: $sweetPink;
+        }
+        
+    }
 }
 
-.project2 {
-    display: flex;
+
+
+.project2-image {
+    order: 1;
+}
+
+.project2-text {
+    margin-left: 30px;
+}
+
+.blog {
+    padding-top: 30px;
     height: 500px;
 
-    .project2-image {
-        width: 50%;
-
-        img {
-            width: 100%;
-            height: auto;
-        }
-
-    }
-
-    .project2-text {
-        width: 50%;
+    h3 {
+        text-align: center;
     }
 }
 
+
+.connect {
+    padding-top: 30px;
+    height: 500px;
+
+    h3 {
+        text-align: center;
+    }
+}
+
+.social-icons {
+    text-align: center;
+
+    .fas {
+        font-size: 2rem;
+    }
+}
+
+form {
+    border: 1px solid red;
+    color: black;
+}
+
+input {
+    color: black;
+}
+
+footer {
+    height: 50px;
+    text-align: center;
+    background-color: $red;
+}
+
+.iframe-div{
+    position: relative; padding-bottom: 62.5%; height: 0;
+
+    iframe {
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    }
+}

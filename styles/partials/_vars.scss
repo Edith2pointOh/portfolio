@@ -3,25 +3,89 @@
 $headerFont: 'Open Sans', sans-serif;
 $bodyFont: 'Raleway', sans-serif;
 
-// colours
+// colours get rid of these?
 $purple: #5A528D;
-$green: #008200;
-$green2: #009900;
 $blue: blue;
 $blue2: #0066cc;
-$pink: #ff1493;
-$red: red;
 $grey: grey;
-$orange: #aa7700;
 $greyBrown: #afafaf;
 $lightGrey: #ccc;
 
-$pinkX: rgb(221, 41, 191);
-$orangeX: rgb(253, 99, 32);
+
+// we using these ones
+$pink: rgb(221, 41, 191);
+$orange: rgb(253, 99, 32);
 $yellow: rgb(238, 195, 48);
-$greenX: rgb(50, 211, 44);
+$green: rgb(50, 211, 44);
 $blueX: rgb(72, 155, 220);
 $red: rgb(255, 52, 89);
+$sweetGreen: rgb(221, 240, 224);
+$sweetPink: rgb(255, 240, 255);
+$snowWhite: rgb(255,250,250);
+$ghostWhite: #F8F8FF;
+
+// mixins
+
+@mixin dropShadow() {
+    -webkit-filter: drop-shadow( 3px 1px 1px rgba(0, 0, 0, .7));
+    filter: drop-shadow( 2px 1px 1px rgba(255, 240, 255, .7));
+}
+
+@mixin dot {
+    display: inline-block;
+    width: 22px;
+    margin: 2px;
+    height: 22px;
+    border-radius: 50%;
+    background: black;
+    color: black;
+}
+
+@mixin button {
+    width: 100px;
+    height: 30px;
+    background-color: $pink;
+    margin: 20px 10px 0 0;
+    color: $sweetPink;
+}
+
+@mixin pulse() {
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgb(221, 41, 191);
+  animation: pulse 2s infinite;
+}
+
+.pulse:hover {
+  animation: none;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 240, 255, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(255, 240, 255, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(255, 240, 255, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 240, 255, 0.4);
+    box-shadow: 0 0 0 0 rgba(255, 240, 255, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(255, 240, 255, 0);
+      box-shadow: 0 0 0 10px rgba(255, 240, 255, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(255, 240, 255, 0);
+      box-shadow: 0 0 0 0 rgba(255, 240, 255, 0);
+  }
+}
+
 
 
 
