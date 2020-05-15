@@ -24,6 +24,13 @@ $sweetPink: rgb(255, 240, 255);
 $snowWhite: rgb(255,250,250);
 $ghostWhite: #F8F8FF;
 
+
+// offset colours
+
+$greenLight: rgb(153, 233, 150);
+$orangeLight: rgb(254, 166, 129);
+$pinkLight: rgb(238, 145, 222);
+
 // mixins
 
 @mixin dropShadow() {
