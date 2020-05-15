@@ -278,12 +278,14 @@ body {
   height: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  border: 1px solid red;
   color: white;
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 h1, h2, h3, h4, h5 {
@@ -314,7 +316,7 @@ h2 {
 h3 {
   font-size: 1.4rem;
   line-height: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 h4 {
@@ -333,20 +335,54 @@ p {
   line-height: 1.65rem;
 }
 
-img {
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+.confetti {
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  opacity: 0.75;
+  z-index: 0;
+  /* gpu acceleration */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.confetti.blue {
+  background: #00a8ff;
+}
+
+.confetti.green {
+  background: #4cd137;
+}
+
+.confetti.yellow {
+  background: #fbc531;
+}
+
+.confetti.red {
+  background: #e84118;
+}
+
+.confetti.pink {
+  background: #ff9ff3;
+}
+
+.confetti.circle {
+  border-radius: 50%;
+}
+
+.confetti.rectangle {
+  padding: 0 1px;
 }
 
 header {
-  height: 100vh;
+  min-height: 100vh;
   width: 80%;
   margin: 0 auto;
   background-image: url("../../asests/hero.jpg");
 }
 
 nav {
-  margin: 30px 0;
+  padding: 40px 0;
 }
 
 ul {
@@ -397,7 +433,7 @@ ul li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 30px 0;
+  padding: 50px 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -542,6 +578,8 @@ ul li a:hover {
           justify-content: space-between;
   -ms-flex-line-pack: center;
       align-content: center;
+  -webkit-box-shadow: 0 0 0;
+          box-shadow: 0 0 0;
 }
 
 .skillz-icons {
@@ -565,6 +603,9 @@ ul li a:hover {
 .skillz-icons h5 {
   margin: 5px 0 0 0;
   font-weight: bolder;
+  color: #222;
+  -webkit-filter: drop-shadow(3px 1px 1px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(2px 1px 1px rgba(255, 240, 255, 0.7));
 }
 
 .wordpress path {
@@ -777,7 +818,7 @@ ul li a:hover {
 }
 
 .connect {
-  padding: 30px 0;
+  padding: 30px;
 }
 
 .connect h3 {
@@ -808,7 +849,7 @@ ul li a:hover {
 }
 
 .social-flex div {
-  width: 100%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -817,65 +858,88 @@ ul li a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #222;
-  padding: 10px;
+  padding: 10px 5px 10px 10px;
 }
 
 .social-flex div .circle-pic-div {
-  max-width: 35%;
+  max-width: 100%;
   height: auto;
 }
 
 .social-flex div .circle-pic-div img {
   width: 100%;
-  height: 100%;
+  height: auto;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
-.social-flex .social-icons-box {
+.social-icons-box {
   width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 10px 10px 5px;
 }
 
-.social-flex .social-icons-box .social-icons {
+.social-icons-box p {
   text-align: center;
-  max-width: 100%;
-  display: block;
 }
 
-.social-flex .social-icons-box .social-icons i {
+.social-icons-box .social-icons {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.social-icons-box .social-icons i {
   font-size: 2rem;
-  margin: 0 20px 0 0;
+  margin: 0 0 0 20px;
 }
 
-.social-flex .social-icons-box .social-icons i:nth-of-type(1) {
+.social-icons-box .social-icons i:nth-of-type(1) {
   color: #fd6320;
 }
 
-.social-flex .social-icons-box .social-icons i:nth-of-type(2) {
+.social-icons-box .social-icons i:nth-of-type(2) {
   color: #489bdc;
 }
 
-.social-flex .social-icons-box .social-icons i:nth-of-type(3) {
+.social-icons-box .social-icons i:nth-of-type(3) {
   color: #eec330;
 }
 
-.social-flex .social-icons-box .social-icons i:nth-of-type(4) {
+.social-icons-box .social-icons i:nth-of-type(4) {
   color: #32d32c;
 }
 
-.social-flex .social-icons-box .social-icons .email {
+.email {
   text-align: center;
   padding-top: 15px;
   max-width: 100%;
   display: block;
 }
 
-.social-flex .social-icons-box .social-icons .email i {
+.email i {
   font-size: 2rem;
   color: #ff3459;
 }
 
-.social-flex .social-icons-box .social-icons .email i p {
+.email i p {
   color: white;
   display: inline-block;
   font-family: 'Raleway', sans-serif;
@@ -914,6 +978,10 @@ ul li a:hover {
 footer {
   height: 50px;
   text-align: center;
-  background-color: #ff3459;
+}
+
+footer p {
+  padding-top: 15px;
+  font-size: .8rem;
 }
 /*# sourceMappingURL=styles.css.map */

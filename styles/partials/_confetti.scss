@@ -1,0 +1,38 @@
+// confetti code compliments of https://codepen.io/EmersonGS/pen/vwVNvp
+
+
+
+.confetti {
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  opacity: 0.75;
+  z-index: 0;
+  /* gpu acceleration */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  &.blue {
+    background: #00a8ff;
+  }
+  &.green {
+    background: #4cd137;
+  }
+  &.yellow {
+    background: #fbc531;
+  }
+  &.red {
+    background: #e84118;
+  }
+  &.pink {
+    background: #ff9ff3;
+  }
+  &.circle {
+    border-radius: 50%;
+  }
+  &.rectangle {
+    padding: 0 1px;
+  }
+}

@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Raleway&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/1712528bbb.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Edith's portfolio</title>
 </head>
@@ -27,13 +28,10 @@
                 <div class="header-text">
                     <h3> &#60;Hello World /&#62;</h3>
                     <h1>I'm Edith, <span>Web Developer</span></h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, in numquam. Id, odit facilis,
-                        vitae
-                        consequatur molestiae necessitatibus quo nam provident placeat corrupti animi atque. Mollitia,
-                        molestiae? Itaque, ullam odit.
+                    <p>And life should be full of pleasant surprises.
                     </p>
                     <Button>Resume<i class="fas fa-download"></i></Button>
-                    <Button>Suprise!</Button>
+                    <Button id="confetti-container" onclick="emit()">Surprise!</Button>
                 </div>
             </div>
     </header>
@@ -41,7 +39,6 @@
     <div>
 
         <!-- About me / education -->
-        <!-- <div class="body-wrapper"> -->
         <section class="about-studies body-wrapper">
             <div class="about-me">
                 <h3>About Me</h3>
@@ -155,9 +152,13 @@
                         </div>
                     </div>
                     <h5>Solo Jquery project</h5>
-                    <p>React, Firebase, HTML5, CSS3, JavaScript</p>
-                    <button class="portfolio-btn">View Live</button>
-                    <button class="portfolio-btn">Github</button>
+                    <p>HTML5, CSS3, JQuery</p>
+                    <button class="portfolio-btn"><a
+                            href="https://traineredith.github.io/edithWerbelProjectThree/">ViewLive</a></button>
+                    <button class="portfolio-btn"><a
+                            href="https://github.com/traineredith/edithWerbelProjectThree">Github</a>
+
+                    </button>
                 </div>
             </div>
 
@@ -174,8 +175,9 @@
                     </div>
                     <h5>Group project with Vincci Tsui, Zarina Mia & George Zikos</h5>
                     <p>React, Firebase, HTML5, SASS, JavaScript</p>
-                    <button class="portfolio-btn">View Live</button>
-                    <button class="portfolio-btn">Github</button>
+                    <button class="portfolio-btn"><a href="http://localhost:3000/Refridgeration-Versification"></a>View
+                        Live</button>
+                    <button class="portfolio-btn"><a href="https://github.com/ZEVG-project6">Github</a></button>
                 </div>
             </div>
 
@@ -192,8 +194,9 @@
                     </div>
                     <h5>Pair programing project with Nikita Guliaev</h5>
                     <p>API, jQuery, SASS</p>
-                    <button class="portfolio-btn">View Live</button>
-                    <button class="portfolio-btn">Github</button>
+                    <button class="portfolio-btn"><a href=" https://nikitaandedith.github.io/Covid-19-Tracker/">View
+                            Live</a></button>
+                    <button class="portfolio-btn"><a href="https://github.com/NikitaAndEdith">Github</a></button>
                 </div>
             </div>
 
@@ -208,11 +211,13 @@
             <h3>Connect</h3>
             <div class="connect-flex">
                 <div class="social-flex">
+
                     <div>
                         <div class="circle-pic-div">
                             <img src="./asests/circleEdith.png" alt="">
                         </div>
                     </div>
+
                     <div class="social-icons-box">
                         <p>Hire me, chat with me or just plain following my coding adventures.</p>
                         <div class="social-icons">
@@ -265,6 +270,8 @@
         <footer>
             <p>Copyright 2020, Edith Werbel</p>
         </footer>
+        <script type="text/javascript" src="scripts.js"></script>
+
 </body>
 
 </html>

@@ -25,12 +25,14 @@ body {
     height: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    border: 1px solid red;
     color: white;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
+
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 h1, h2, h3, h4, h5 {
@@ -64,7 +66,7 @@ h3
     { 
     font-size: 1.4rem; 
     line-height:1rem;
-    margin-bottom:1rem
+    margin-bottom:1.5rem
 } 
      
 h4 
@@ -88,6 +90,6 @@ p {
     line-height:1.65rem;   
 }
 
-img {
-    object-fit: scale-down;
-}
+// img {
+//     object-fit: scale-down;
+// }
