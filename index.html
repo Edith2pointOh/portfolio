@@ -13,38 +13,44 @@
 </head>
 
 <body>
-    <header>
+    <div class="body-wrapper">
+        <header>
 
-        <div class="body-wrapper">
-            <nav>
-                <ul>
-                    <li><a class="nav-about" href="">About Me</a></li>
-                    <li><a class="nav-skills" href="">Skills</a></li>
-                    <li><a class="nav-projects" href="">Projects</a></li>
-                    <li><a class="nav-connect" href="">Connect</a></li>
-                </ul>
-            </nav>
-            <div class="header-intro">
-                <div class="header-text">
-                    <h3> &#60;Hello World /&#62;</h3>
-                    <h1>I'm Edith, <span>Web Developer</span></h1>
-                    <p>And life should be full of pleasant surprises.
-                    </p>
-                    <Button>Resume<i class="fas fa-download"></i></Button>
-                    <Button id="confetti-container" onclick="emit()">Surprise!</Button>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a class="nav-about" href="">About Me</a></li>
+                        <li><a class="nav-skills" href="">Skills</a></li>
+                        <li><a class="nav-projects" href="">Projects</a></li>
+                        <li><a class="nav-connect" href="">Connect</a></li>
+                    </ul>
+                </nav>
+                <div class="header-intro">
+                    <div class="header-text">
+                        <h3> &#60;Hello World /&#62;</h3>
+                        <h1>I'm Edith, <span>Web Developer</span></h1>
+                        <p>And life should be full of pleasant surprises.
+                        </p>
+                        <Button>Resume<i class="fas fa-download"></i></Button>
+                        <Button id="confetti-container" onclick="emit()">Surprise!</Button>
+                    </div>
                 </div>
-            </div>
-    </header>
+        </header>
 
-    <div>
-
-        <!-- About me / education -->
-        <section class="about-studies body-wrapper">
-            <div class="about-me">
-                <h3>About Me</h3>
-                <h5>After a decade in the fitness industy, this gal is making the exciting leap from corporal to
-                    cerebal. But truth is, I've been unskillfully hacking together websites for as long as I can
-                    remember.</h5>
+        <!-- About me -->
+        <section class="about">
+            <h3>&#60;About Me /&#62;</h3>
+            <div class="about-flex-container">
+                <div class="about-me">
+                    <p>After a decade in the fitness industy, this gal is making the exciting leap from corporal to
+                        cerebal. But truth is, I've been unskillfully hacking together websites for as long as I can
+                        remember. Just now I've levelled up.</p>
+                    <p>The thing I that draws me to web development is making something very real out of seemily nothing
+                        but a few taps of the keyboard. I want to be part of making that magic, creativity, ingenuity
+                        and
+                        the shaping of our collective online experience.
+                    </p>
+                </div>
                 <div class="dotted-line-box-wrapper">
                     <div class="dotted-line-box">
                         <h5>On the dotted line...</h5>
@@ -56,8 +62,12 @@
                     </div>
                 </div>
             </div>
-            <div class="studies">
-                <h3>Studies</h3>
+
+        </section>
+        <!-- studies -->
+        <section>
+            <div>
+                <h3>&#60;Studies /&#62;</h3>
 
                 <div class="studies1-box-wrapper">
                     <div class="studies1">
@@ -97,45 +107,55 @@
         </section>
         <!-- banner of skills ie react, sass etc. -->
         <section class="skillz">
-            <div class="skillz-flex body-wrapper">
+            <h3>&#60;Skills /&#62;</h3>
+            <!-- <div class="skillz-flex"> -->
+            <div class="skills-first-row">
                 <div class="skillz-icons">
-                    <img src="./asests/html-5.svg" alt="">
+                    <img src="./asests/html-5.png" alt="logo of HTML">
                     <h5>HTML</h5>
                 </div>
                 <div class="skillz-icons">
-                    <img src="./asests/css-3.svg" alt="">
+                    <img src="./asests/css-3.png" alt="logo of CSS">
                     <h5>CSS</h5>
                 </div>
                 <div class="skillz-icons">
-                    <img src="./asests/sass.svg" alt="">
+                    <img src="./asests/sass.png" alt="logo of Sass">
                     <h5>Sass</h5>
                 </div>
                 <div class="skillz-icons">
-                    <img src="./asests/javascript.svg" alt="">
+                    <img src="./asests/javascript.png" alt="logo of JavaScript">
                     <h5>JavaScript</h5>
                 </div>
+            </div>
+
+
+            <div class="skills-second-row">
                 <div class="skillz-icons">
-                    <img class="git-icon" src="./asests/github-octocat.svg" alt="">
-                    <h5>Github</h5>
+                    <img class="wordpress" src="./asests/wordpress-icon.png" alt="logo of Wordpress">
+                    <h5>Wordpress</h5>
                 </div>
+
+
                 <div class="skillz-icons">
-                    <img src="./asests/react.svg" alt="">
-                    <h5>React</h5>
-                </div>
-                <div class="skillz-icons">
-                    <img src="./asests/firebase.svg" alt="">
+                    <img src="./asests/firebase.png" alt="logo of firebase">
                     <h5>Firebase</h5>
                 </div>
                 <div class="skillz-icons">
-                    <img class="wordpress" src="./asests/wordpress-icon-svgGreen.svg" alt="">
-                    <h5>Wordpress</h5>
+                    <img class="git-icon" src="./asests/github-octocat2.png" alt="logo of Github">
+                    <h5>Github</h5>
+                </div>
+
+                <div class="skillz-icons">
+                    <img src="./asests/react.png" alt="logo of React">
+                    <h5>React</h5>
                 </div>
             </div>
+            <!-- </div> -->
         </section>
 
         <!-- portfolio -->
-        <section class="body-wrapper portfolio-section">
-            <h3>Portfolio</h3>
+        <section class="portfolio-section">
+            <h3>&#60;Portfolio /&#62;</h3>
 
             <div class="project1">
                 <div class="outer-video-div">
@@ -202,13 +222,13 @@
 
         </section>
 
-
-        <section class="body-wrapper blog">
+        <!-- Maybe add this in later IDK -->
+        <!-- <section class="blog">
             <h3>Blog</h3>
-        </section>
+        </section> -->
 
-        <section class="body-wrapper connect">
-            <h3>Connect</h3>
+        <section class="connect">
+            <h3>&#60;Connect /&#62;</h3>
             <div class="connect-flex">
                 <div class="social-flex">
 
@@ -266,11 +286,12 @@
                 </div>
             </div>
         </section>
+    </div>
 
-        <footer>
-            <p>Copyright 2020, Edith Werbel</p>
-        </footer>
-        <script type="text/javascript" src="scripts.js"></script>
+    <footer>
+        <p>Copyright 2020, Edith Werbel</p>
+    </footer>
+    <script type="text/javascript" src="scripts.js"></script>
 
 </body>
 

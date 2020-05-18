@@ -275,10 +275,15 @@ body {
 
 .body-wrapper {
   width: 80%;
+  padding: 0 50px;
   height: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  color: white;
+}
+
+section {
+  padding: 50px 50px;
+  margin-top: 50px;
   -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
@@ -316,7 +321,8 @@ h2 {
 h3 {
   font-size: 1.4rem;
   line-height: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 h4 {
@@ -331,7 +337,7 @@ h5 {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.65rem;
 }
 
@@ -375,14 +381,15 @@ p {
 }
 
 header {
-  min-height: 100vh;
-  width: 80%;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 800px;
   margin: 0 auto;
   background-image: url("../../asests/hero.jpg");
-}
-
-nav {
-  padding: 40px 0;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: fit;
+  padding: 50px;
 }
 
 ul {
@@ -413,8 +420,8 @@ ul li a:hover {
   margin-top: 15%;
 }
 
-.header-intro .header-text {
-  margin-right: 30px;
+.header-intro h3 {
+  text-align: left;
 }
 
 .header-intro button {
@@ -429,23 +436,29 @@ ul li a:hover {
   margin-left: 5px;
 }
 
-.about-studies {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.about {
   padding: 50px 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+.about h3 {
+  text-align: center;
+}
+
+.about-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .about-me {
   width: 50%;
   padding-right: 15px;
-}
-
-.about-me h3, .about-me h5 {
-  text-align: center;
 }
 
 .dotted-line-box-wrapper {
@@ -564,22 +577,17 @@ ul li a:hover {
   color: #dd29bf;
 }
 
-.skillz {
-  background-color: #eec330;
-  padding: 20px 0;
-}
-
-.skillz-flex {
+.skills-first-row, .skills-second-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-shadow: 0 0 0;
-          box-shadow: 0 0 0;
+}
+
+.skills-first-row {
+  margin-bottom: 20px;
 }
 
 .skillz-icons {
@@ -592,24 +600,17 @@ ul li a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  margin-bottom: 5px;
 }
 
 .skillz-icons img {
   height: 100px;
-  -webkit-filter: drop-shadow(3px 1px 1px rgba(0, 0, 0, 0.7));
-  filter: drop-shadow(2px 1px 1px rgba(255, 240, 255, 0.7));
 }
 
-.skillz-icons h5 {
+.skillz-icons p {
   margin: 5px 0 0 0;
   font-weight: bolder;
-  color: #222;
-  -webkit-filter: drop-shadow(3px 1px 1px rgba(0, 0, 0, 0.7));
-  filter: drop-shadow(2px 1px 1px rgba(255, 240, 255, 0.7));
-}
-
-.wordpress path {
-  fill: #ff0000;
+  color: white;
 }
 
 .portfolio-section {
