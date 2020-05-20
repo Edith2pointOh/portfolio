@@ -17,16 +17,40 @@ ul {
 
     li {
         margin-left: 20px;
-        text-transform: uppercase;
-        font-weight: bold;
+        text-transform: lowercase;
+        //  font-weight: bold;
 
         a {
-            color: white;
+            color:$pink;
+            transition: 0.2s;
+            letter-spacing: 2px;
+
+                // @media (max-width: 600px) {
+                // display: none;
+                // }
+            
+            }
 
             &:hover {
-                color: $pink;
+                color: $sweetPink;
             }
         }
+    }
+
+
+.icon {
+    display: none;
+    color: $pink;
+}
+
+@media screen and (max-width: 700px) {
+
+    nav li a {
+        display: none;
+    }
+
+    nav a.icon {
+        display: block;
     }
 }
 
@@ -40,8 +64,18 @@ ul {
         text-align: left;
     }
 
+    // p span {
+    //     display: block;
+    // }
+
     button {
         @include button;
+        transition: 0.2s;
+
+        &:hover {
+            border: 2px solid $pink;
+            background-color: #222;
+        }
 
         i {
             margin-left: 5px;

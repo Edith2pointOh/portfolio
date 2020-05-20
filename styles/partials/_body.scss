@@ -16,8 +16,11 @@
 }
 
 .about-me {
-    width: 50%;
-    padding-right: 15px;
+    width: 75%;
+
+    .first-para {
+        margin-bottom: 20px;
+    }
 }
 
 .dotted-line-box-wrapper {
@@ -25,12 +28,13 @@
     position: relative;
     background: linear-gradient(to bottom right, red, $blue, $yellow);
     padding: 3px;
+    margin-left: 30px;
 
     .dotted-line-box {
     // border: 2px solid red;
     background: #222;
     color: white;
-    padding: 2rem;
+    padding: 30px;
     margin: 0 auto;
     
 
@@ -42,95 +46,96 @@
 
 }
 
+// UNUSED STUDIES AREA, MIGHT INCORPORATE LATER
 
 // Studies 
 
-.studies {
-    width: 50%;
-    padding-left: 10px;
-    display: flex;
-    flex-direction: column;
+// .studies {
+//     width: 50%;
+//     padding-left: 10px;
+//     display: flex;
+//     flex-direction: column;
 
-    h3 {
-        text-align: center;
-    }
+//     h3 {
+//         text-align: center;
+//     }
 
-    h5 {
-        margin-bottom: .2rem;
-        font-size: 1rem;
-    }
+//     h5 {
+//         margin-bottom: .2rem;
+//         font-size: 1rem;
+//     }
 
-}
+// }
 
-.studies1-box-wrapper {
-    position: relative;
-    background: linear-gradient(to bottom right, $green, $greenLight);
-    padding: 3px;
-    width: 50%;
+// .studies1-box-wrapper {
+//     position: relative;
+//     background: linear-gradient(to bottom right, $green, $greenLight);
+//     padding: 3px;
+//     width: 50%;
 
-    .studies1 {
-        background: #222;
-        color: white; 
-        padding: 3px; 
+//     .studies1 {
+//         background: #222;
+//         color: white; 
+//         padding: 3px; 
         
-        h5 {
-            color: $green;
-        }
-    }
-}
+//         h5 {
+//             color: $green;
+//         }
+//     }
+// }
 
-.studies2-box-wrapper {
-    position: relative;
-    background: linear-gradient(to bottom left, $blue, $blueX);
-    padding: 3px;
-    width: 50%;
-    align-self: flex-end;
+// .studies2-box-wrapper {
+//     position: relative;
+//     background: linear-gradient(to bottom left, $blue, $blueX);
+//     padding: 3px;
+//     width: 50%;
+//     align-self: flex-end;
 
-    .studies2 {
-        background: #222;
-        color: white;
-        padding-left: 7px;
+//     .studies2 {
+//         background: #222;
+//         color: white;
+//         padding-left: 7px;
 
-        h5 {
-            color: $blueX;
-        }
-    }
-}
+//         h5 {
+//             color: $blueX;
+//         }
+//     }
+// }
 
-.studies3-box-wrapper {
-    position: relative;
-    background: linear-gradient(to bottom left, $orangeLight, $orange);
-    padding: 3px;
-    width: 50%;
+// .studies3-box-wrapper {
+//     position: relative;
+//     background: linear-gradient(to bottom left, $orangeLight, $orange);
+//     padding: 3px;
+//     width: 50%;
 
-    .studies3 {
-        background: #222;
-        color: white;
-        padding-left: 7px;
+//     .studies3 {
+//         background: #222;
+//         color: white;
+//         padding-left: 7px;
     
-        h5 {
-            color: $orange;
-        }
-    }
-}
+//         h5 {
+//             color: $orange;
+//         }
+//     }
+// }
 
-.studies4-box-wrapper {
-    position: relative;
-    background: linear-gradient(to bottom left, $pinkLight, $pink);
-    padding: 3px;
-    width: 50%;
-    align-self: flex-end;
+// .studies4-box-wrapper {
+//     position: relative;
+//     background: linear-gradient(to bottom left, $pinkLight, $pink);
+//     padding: 3px;
+//     width: 50%;
+//     align-self: flex-end;
 
-        .studies4 {
-        background: #222;
-        color: white;
-        padding-left: 7px;
+//         .studies4 {
+//         background: #222;
+//         color: white;
+//         padding-left: 7px;
     
-        h5 {
-            color: $pink;
-        }
-    }
-}
+//         h5 {
+//             color: $pink;
+//         }
+//     }
+// }
 
 
 .skills-first-row, .skills-second-row {
@@ -163,11 +168,64 @@
     }
 }
 
-.portfolio-section {
-    padding: 30px 0;
 
-    h3 {
-        text-align: center;
+
+.project0 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .project0-image {
+        width: 50%;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .project0-text {
+            width: 50%;
+            justify-self: center;
+            align-items: center;
+
+            .project0-title-box {
+                position: relative;
+                background: linear-gradient(to right, $yellow, rgba(50, 211, 44, 0));
+                padding: 3px;
+                margin-bottom: 1.25rem;
+
+                    div {
+                        background: #222;
+                        color: white;
+
+
+                        h4 {
+                            margin-bottom: 0;
+                            padding: 3px;
+                        }
+                    }
+                
+            }
+
+            p {
+                margin-bottom: 1rem;
+            }
+
+        .portfolio-btn {
+        width: 100px;
+        height: 30px;
+        background-color: $yellow;
+        // margin: 20px 10px 0 0;
+        color: #222;
+        transition: 0.2s;
+
+         &:hover {
+            border: 2px solid $yellow;
+            color: $sweetPink;
+            background-color: #222;
+         }
+        }  
     }
 }
 
@@ -193,7 +251,7 @@
             left: 70%;
             color: $pink;
             // @include dropShadow();
-            @include pulse;
+            // @include pulse;
         }
     }
 
@@ -204,7 +262,7 @@
 
         .project1-title-box {
             position: relative;
-            background: linear-gradient(to right, $pink, rgba(221, 41, 191,0));
+            background: linear-gradient(to right, $orange, rgba(221, 41, 191,0));
             padding: 3px;
             margin-bottom: 1.25rem;
 
@@ -221,16 +279,26 @@
             
         }
 
+        p {
+            margin-bottom: 1rem;
+        }
+
         .portfolio-btn {
         width: 100px;
         height: 30px;
-        background-color: $pink;
-        margin: 20px 10px 0 0;
+        background-color: $orange;
+        margin-right: 10px;
         color: $sweetPink;
+        transition: 0.2s;
+
+        &:hover {
+            border: 2px solid $orange;
+            background-color: #222;
+        }
         }  
     }
 }
-
+// fridge
 .project2 {
     display: flex;
     align-items: center;
@@ -269,12 +337,23 @@
                 
             }
 
+            p {
+                margin-bottom: 1rem;
+            }
+            
+
         .portfolio-btn {
         width: 100px;
         height: 30px;
         background-color: $green;
-        margin: 20px 10px 0 0;
+        margin-right: 10px;
         color: $sweetPink;
+        transition: 0.2s;
+
+        &:hover {
+            border: 2px solid $green;
+            background-color: #222;
+        }
         }  
     }
 }
@@ -300,7 +379,7 @@
 
         .project3-title-box {
             position: relative;
-            background: linear-gradient(to right, $orange, rgba(221, 41, 191,0));
+            background: linear-gradient(to right, $red, rgba(221, 41, 191,0));
             padding: 3px;
             margin-bottom: 1.25rem;
 
@@ -317,45 +396,50 @@
             
         }
 
+        p {
+                margin-bottom: 1rem;
+            }
+
         .portfolio-btn {
         width: 100px;
         height: 30px;
-        background-color: $orange;
-        margin: 20px 10px 0 0;
+        background-color: $red;
+        margin-right: 10px;
         color: $sweetPink;
+         transition: 0.2s;
+
+         &:hover {
+             border: 2px solid $red;
+             background-color: #222;
+         }
         }  
     }
 }
 
-.project2-image {
+.project2-image, .project0-image {
     order: 1;
 }
 
-.project2-text {
-    margin-left: 30px;
-}
+// .project2-text, .project0-text {
+//     margin-left: 30px;
+// }
 
 // BLOG
 
-.blog {
-    padding-top: 30px;
-    height: 500px;
+// .blog {
+//     padding-top: 30px;
+//     height: 500px;
 
-    h3 {
-        text-align: center;
-    }
-}
+//     h3 {
+//         text-align: center;
+//     }
+// }
 
 // CONTACT
 
 
 .connect {
     padding: 30px;
-  
-    h3 {
-        text-align: center;
-        
-    }
 }
 
 .connect-flex{
@@ -366,7 +450,6 @@
 .social-flex {
     display: flex;
     justify-content: space-evenly;
-    // flex-direction: column;
     max-width: 50%;
     margin-right: 30px;
     position: relative;
@@ -374,67 +457,56 @@
     padding: 3px;
 
     div {
-        width: 90%;
         display: flex;
-        flex-direction: column;
         background: #222;
-        padding: 10px 5px 10px 10px;
-
-            .circle-pic-div{
-                max-width: 100%;
-                height: auto;
-
-                img {
-                width: 100%;
-                height: auto;
-                object-fit: contain;
-                }
-            }  
-        }
+        padding: 10px;
+    }
 }
 
-   .social-icons-box{
-    width: 70%;
+.social-pic-text {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 10px 10px 5px; 
+    justify-content: space-between;
 
-        p {
-            text-align: center;
+    .circle-pic-div {
+        width: 50%;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
+    }
+
+    .hire-me-text {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
 
         .social-icons {
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-
+            justify-content: space-between;
+            color: linear-gradient(to bottom right, red, $blue, $yellow);    
 
             i {
-                font-size: 2rem;
-                margin: 0 0 0 20px;
+                color: $yellow;
+                font-size: 20px;
+                 transition: 0.2s;
 
-
-                &:nth-of-type(1) {
-                    color: $orange;
+                &:hover {
+                    color: $pink;
                 }
+                
+;            }
+        }
 
-                &:nth-of-type(2) {
-                    color: $blueX;
-                }
-
-                &:nth-of-type(3) {
-                    color: $yellow;
-                }
-
-                &:nth-of-type(4) {
-                    color: $green;
-                }
-            } 
-         }
-    } 
-
+        .quote {
+            font-style: italic;
+            margin-top: 8px;
+            font-size: 15px;
+        }
+    }
+}
 
 .email {
     text-align: center;
@@ -468,7 +540,8 @@
 
 .form-name-box-wrapper, .form-email-box-wrapper, .form-message-box-wrapper {
     position: relative;
-    background: linear-gradient(to bottom left, $pinkLight, $pink);
+    // background: linear-gradient(to bottom left, $pinkLight, $pink);
+    background: $pink;
     padding: 3px;
     width: 100%;
 

@@ -221,38 +221,6 @@ textarea {
   overflow: hidden;
 }
 
-.pulse:hover {
-  -webkit-animation: none;
-          animation: none;
-}
-
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(255, 240, 255, 0.4);
-  }
-  70% {
-    -webkit-box-shadow: 0 0 0 10px rgba(255, 240, 255, 0);
-  }
-  100% {
-    -webkit-box-shadow: 0 0 0 0 rgba(255, 240, 255, 0);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(255, 240, 255, 0.4);
-            box-shadow: 0 0 0 0 rgba(255, 240, 255, 0.4);
-  }
-  70% {
-    -webkit-box-shadow: 0 0 0 10px rgba(255, 240, 255, 0);
-            box-shadow: 0 0 0 10px rgba(255, 240, 255, 0);
-  }
-  100% {
-    -webkit-box-shadow: 0 0 0 0 rgba(255, 240, 255, 0);
-            box-shadow: 0 0 0 0 rgba(255, 240, 255, 0);
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -333,12 +301,13 @@ h4 {
 
 h5 {
   font-size: 1.1rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 p {
   font-size: 1.1rem;
   line-height: 1.65rem;
+  letter-spacing: .7px;
 }
 
 .confetti {
@@ -403,16 +372,32 @@ ul {
 
 ul li {
   margin-left: 20px;
-  text-transform: uppercase;
-  font-weight: bold;
+  text-transform: lowercase;
 }
 
 ul li a {
-  color: white;
+  color: #dd29bf;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  letter-spacing: 2px;
 }
 
-ul li a:hover {
+ul li:hover {
+  color: #fff0ff;
+}
+
+.icon {
+  display: none;
   color: #dd29bf;
+}
+
+@media screen and (max-width: 700px) {
+  nav li a {
+    display: none;
+  }
+  nav a.icon {
+    display: block;
+  }
 }
 
 .header-intro {
@@ -430,6 +415,13 @@ ul li a:hover {
   background-color: #dd29bf;
   margin: 20px 10px 0 0;
   color: #fff0ff;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.header-intro button:hover {
+  border: 2px solid #dd29bf;
+  background-color: #222;
 }
 
 .header-intro button i {
@@ -457,8 +449,11 @@ ul li a:hover {
 }
 
 .about-me {
-  width: 50%;
-  padding-right: 15px;
+  width: 75%;
+}
+
+.about-me .first-para {
+  margin-bottom: 20px;
 }
 
 .dotted-line-box-wrapper {
@@ -466,115 +461,19 @@ ul li a:hover {
   background: -webkit-gradient(linear, left top, right bottom, from(red), color-stop(blue), to(#eec330));
   background: linear-gradient(to bottom right, red, blue, #eec330);
   padding: 3px;
+  margin-left: 30px;
 }
 
 .dotted-line-box-wrapper .dotted-line-box {
   background: #222;
   color: white;
-  padding: 2rem;
+  padding: 30px;
   margin: 0 auto;
 }
 
 .dotted-line-box-wrapper .dotted-line-box h5 {
   text-align: left;
   margin-bottom: .2rem;
-}
-
-.studies {
-  width: 50%;
-  padding-left: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.studies h3 {
-  text-align: center;
-}
-
-.studies h5 {
-  margin-bottom: .2rem;
-  font-size: 1rem;
-}
-
-.studies1-box-wrapper {
-  position: relative;
-  background: -webkit-gradient(linear, left top, right bottom, from(#32d32c), to(#99e996));
-  background: linear-gradient(to bottom right, #32d32c, #99e996);
-  padding: 3px;
-  width: 50%;
-}
-
-.studies1-box-wrapper .studies1 {
-  background: #222;
-  color: white;
-  padding: 3px;
-}
-
-.studies1-box-wrapper .studies1 h5 {
-  color: #32d32c;
-}
-
-.studies2-box-wrapper {
-  position: relative;
-  background: -webkit-gradient(linear, right top, left bottom, from(blue), to(#489bdc));
-  background: linear-gradient(to bottom left, blue, #489bdc);
-  padding: 3px;
-  width: 50%;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-.studies2-box-wrapper .studies2 {
-  background: #222;
-  color: white;
-  padding-left: 7px;
-}
-
-.studies2-box-wrapper .studies2 h5 {
-  color: #489bdc;
-}
-
-.studies3-box-wrapper {
-  position: relative;
-  background: -webkit-gradient(linear, right top, left bottom, from(#fea681), to(#fd6320));
-  background: linear-gradient(to bottom left, #fea681, #fd6320);
-  padding: 3px;
-  width: 50%;
-}
-
-.studies3-box-wrapper .studies3 {
-  background: #222;
-  color: white;
-  padding-left: 7px;
-}
-
-.studies3-box-wrapper .studies3 h5 {
-  color: #fd6320;
-}
-
-.studies4-box-wrapper {
-  position: relative;
-  background: -webkit-gradient(linear, right top, left bottom, from(#ee91de), to(#dd29bf));
-  background: linear-gradient(to bottom left, #ee91de, #dd29bf);
-  padding: 3px;
-  width: 50%;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-.studies4-box-wrapper .studies4 {
-  background: #222;
-  color: white;
-  padding-left: 7px;
-}
-
-.studies4-box-wrapper .studies4 h5 {
-  color: #dd29bf;
 }
 
 .skills-first-row, .skills-second-row {
@@ -613,12 +512,69 @@ ul li a:hover {
   color: white;
 }
 
-.portfolio-section {
-  padding: 30px 0;
+.project0 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 
-.portfolio-section h3 {
-  text-align: center;
+.project0 .project0-image {
+  width: 50%;
+}
+
+.project0 .project0-image img {
+  width: 100%;
+  height: auto;
+}
+
+.project0 .project0-text {
+  width: 50%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project0 .project0-text .project0-title-box {
+  position: relative;
+  background: -webkit-gradient(linear, left top, right top, from(#eec330), to(rgba(50, 211, 44, 0)));
+  background: linear-gradient(to right, #eec330, rgba(50, 211, 44, 0));
+  padding: 3px;
+  margin-bottom: 1.25rem;
+}
+
+.project0 .project0-text .project0-title-box div {
+  background: #222;
+  color: white;
+}
+
+.project0 .project0-text .project0-title-box div h4 {
+  margin-bottom: 0;
+  padding: 3px;
+}
+
+.project0 .project0-text p {
+  margin-bottom: 1rem;
+}
+
+.project0 .project0-text .portfolio-btn {
+  width: 100px;
+  height: 30px;
+  background-color: #eec330;
+  color: #222;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.project0 .project0-text .portfolio-btn:hover {
+  border: 2px solid #eec330;
+  color: #fff0ff;
+  background-color: #222;
 }
 
 .project1 {
@@ -648,12 +604,6 @@ ul li a:hover {
   bottom: 30%;
   left: 70%;
   color: #dd29bf;
-  border-radius: 50%;
-  cursor: pointer;
-  -webkit-box-shadow: 0 0 0 #dd29bf;
-          box-shadow: 0 0 0 #dd29bf;
-  -webkit-animation: pulse 2s infinite;
-          animation: pulse 2s infinite;
 }
 
 .project1 .project1-text {
@@ -667,8 +617,8 @@ ul li a:hover {
 
 .project1 .project1-text .project1-title-box {
   position: relative;
-  background: -webkit-gradient(linear, left top, right top, from(#dd29bf), to(rgba(221, 41, 191, 0)));
-  background: linear-gradient(to right, #dd29bf, rgba(221, 41, 191, 0));
+  background: -webkit-gradient(linear, left top, right top, from(#fd6320), to(rgba(221, 41, 191, 0)));
+  background: linear-gradient(to right, #fd6320, rgba(221, 41, 191, 0));
   padding: 3px;
   margin-bottom: 1.25rem;
 }
@@ -683,12 +633,23 @@ ul li a:hover {
   padding: 3px;
 }
 
+.project1 .project1-text p {
+  margin-bottom: 1rem;
+}
+
 .project1 .project1-text .portfolio-btn {
   width: 100px;
   height: 30px;
-  background-color: #dd29bf;
-  margin: 20px 10px 0 0;
+  background-color: #fd6320;
+  margin-right: 10px;
   color: #fff0ff;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.project1 .project1-text .portfolio-btn:hover {
+  border: 2px solid #fd6320;
+  background-color: #222;
 }
 
 .project2 {
@@ -737,12 +698,23 @@ ul li a:hover {
   padding: 3px;
 }
 
+.project2 .project2-text p {
+  margin-bottom: 1rem;
+}
+
 .project2 .project2-text .portfolio-btn {
   width: 100px;
   height: 30px;
   background-color: #32d32c;
-  margin: 20px 10px 0 0;
+  margin-right: 10px;
   color: #fff0ff;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.project2 .project2-text .portfolio-btn:hover {
+  border: 2px solid #32d32c;
+  background-color: #222;
 }
 
 .project3 {
@@ -775,8 +747,8 @@ ul li a:hover {
 
 .project3 .project3-text .project3-title-box {
   position: relative;
-  background: -webkit-gradient(linear, left top, right top, from(#fd6320), to(rgba(221, 41, 191, 0)));
-  background: linear-gradient(to right, #fd6320, rgba(221, 41, 191, 0));
+  background: -webkit-gradient(linear, left top, right top, from(#ff3459), to(rgba(221, 41, 191, 0)));
+  background: linear-gradient(to right, #ff3459, rgba(221, 41, 191, 0));
   padding: 3px;
   margin-bottom: 1.25rem;
 }
@@ -791,39 +763,33 @@ ul li a:hover {
   padding: 3px;
 }
 
+.project3 .project3-text p {
+  margin-bottom: 1rem;
+}
+
 .project3 .project3-text .portfolio-btn {
   width: 100px;
   height: 30px;
-  background-color: #fd6320;
-  margin: 20px 10px 0 0;
+  background-color: #ff3459;
+  margin-right: 10px;
   color: #fff0ff;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
-.project2-image {
+.project3 .project3-text .portfolio-btn:hover {
+  border: 2px solid #ff3459;
+  background-color: #222;
+}
+
+.project2-image, .project0-image {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
 }
 
-.project2-text {
-  margin-left: 30px;
-}
-
-.blog {
-  padding-top: 30px;
-  height: 500px;
-}
-
-.blog h3 {
-  text-align: center;
-}
-
 .connect {
   padding: 30px;
-}
-
-.connect h3 {
-  text-align: center;
 }
 
 .connect-flex {
@@ -850,32 +816,35 @@ ul li a:hover {
 }
 
 .social-flex div {
-  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   background: #222;
-  padding: 10px 5px 10px 10px;
+  padding: 10px;
 }
 
-.social-flex div .circle-pic-div {
+.social-pic-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.social-pic-text .circle-pic-div {
+  width: 50%;
+}
+
+.social-pic-text .circle-pic-div img {
   max-width: 100%;
-  height: auto;
-}
-
-.social-flex div .circle-pic-div img {
-  width: 100%;
-  height: auto;
+  max-height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
-.social-icons-box {
-  width: 70%;
+.social-pic-text .hire-me-text {
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -883,49 +852,34 @@ ul li a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 10px 10px 10px 5px;
-}
-
-.social-icons-box p {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   text-align: center;
 }
 
-.social-icons-box .social-icons {
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+.social-pic-text .hire-me-text .social-icons {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: linear-gradient(to bottom right, red, blue, #eec330);
 }
 
-.social-icons-box .social-icons i {
-  font-size: 2rem;
-  margin: 0 0 0 20px;
-}
-
-.social-icons-box .social-icons i:nth-of-type(1) {
-  color: #fd6320;
-}
-
-.social-icons-box .social-icons i:nth-of-type(2) {
-  color: #489bdc;
-}
-
-.social-icons-box .social-icons i:nth-of-type(3) {
+.social-pic-text .hire-me-text .social-icons i {
   color: #eec330;
+  font-size: 20px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
-.social-icons-box .social-icons i:nth-of-type(4) {
-  color: #32d32c;
+.social-pic-text .hire-me-text .social-icons i:hover {
+  color: #dd29bf;
+}
+
+.social-pic-text .hire-me-text .quote {
+  font-style: italic;
+  margin-top: 8px;
+  font-size: 15px;
 }
 
 .email {
@@ -962,8 +916,7 @@ ul li a:hover {
 
 .form-name-box-wrapper, .form-email-box-wrapper, .form-message-box-wrapper {
   position: relative;
-  background: -webkit-gradient(linear, right top, left bottom, from(#ee91de), to(#dd29bf));
-  background: linear-gradient(to bottom left, #ee91de, #dd29bf);
+  background: #dd29bf;
   padding: 3px;
   width: 100%;
 }
