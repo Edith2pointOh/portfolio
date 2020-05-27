@@ -38,6 +38,8 @@ ul {
     font-size: 30px;
     cursor: pointer;
     display: none;
+    position: absolute;
+    left: 85%;
 }
 
 .hamburger:focus {
@@ -73,14 +75,16 @@ nav {
         display: flex;
         align-content: flex-end;
         position: absolute;
-        width: 150px;
+        width: 120px;
         margin-top: 45px;
-        background: rgba(0, 0, 0, 0.5);;
-        // border: 1px solid red; 
+        padding: 5px;
+
+        @media screen and (max-width: 450px) {
+        background: rgba(0, 0, 0, 0.5);
+        }
     }
 
     .nav li a {
-    //    border: 1px solid red;
        padding-bottom: 20px;
        display: block;
 
@@ -101,7 +105,9 @@ nav {
     }
 
     @media screen and (max-width: 450px) {
+        width: 100%;
         text-align: center;
+        margin: 60% auto;
     }
 
     h3 {

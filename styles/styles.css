@@ -433,6 +433,8 @@ ul li a:hover {
   font-size: 30px;
   cursor: pointer;
   display: none;
+  position: absolute;
+  left: 85%;
 }
 
 .hamburger:focus {
@@ -472,10 +474,19 @@ nav {
     -ms-flex-line-pack: end;
         align-content: flex-end;
     position: absolute;
-    width: 150px;
+    width: 120px;
     margin-top: 45px;
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 800px) and (max-width: 450px) {
+  .nav.show {
     background: rgba(0, 0, 0, 0.5);
   }
+}
+
+@media screen and (max-width: 800px) {
   .nav li a {
     padding-bottom: 20px;
     display: block;
@@ -499,7 +510,9 @@ nav {
 
 @media screen and (max-width: 450px) {
   .header-intro {
+    width: 100%;
     text-align: center;
+    margin: 60% auto;
   }
 }
 
