@@ -14,59 +14,104 @@ header {
 ul {
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
 
     li {
         margin-left: 20px;
         text-transform: lowercase;
-        //  font-weight: bold;
 
         a {
             color:$pink;
             transition: 0.2s;
             letter-spacing: 2px;
 
-                // @media (max-width: 600px) {
-                // display: none;
-                // }
-            
-            }
-
             &:hover {
                 color: $sweetPink;
             }
         }
     }
-
-
-.icon {
-    display: none;
-    color: $pink;
 }
 
-@media screen and (max-width: 700px) {
+.hamburger {
+    background-color: transparent;
+    color: $pink;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
 
-    nav li a {
+.hamburger:focus {
+    outline: none;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    nav {
+       justify-content: flex-end;
+    }
+
+    .nav {
         display: none;
     }
 
-    nav a.icon {
+    .hamburger {
         display: block;
+        transition: 0.2s;
+        
+        &:hover {
+            color: $sweetPink;
+        }
+    }
+
+    .nav.show {
+        display: flex;
+        align-content: flex-end;
+        position: absolute;
+        width: 150px;
+        margin-top: 45px;
+        background: rgba(0, 0, 0, 0.5);;
+        // border: 1px solid red; 
+    }
+
+    .nav li a {
+    //    border: 1px solid red;
+       padding-bottom: 20px;
+       display: block;
+
+       &:hover {
+           color: $sweetPink;
+       }
+      
     }
 }
 
-
-
 .header-intro {
     width:50%;
-    margin-top: 15%;
+    margin-top: 25%;
+
+    @media screen and (max-width: 600px) {
+        width: 80%;
+        margin-top: 50%;
+    }
+
+    @media screen and (max-width: 450px) {
+        text-align: center;
+    }
 
     h3 {
         text-align: left;
-    }
+        margin-bottom: 20px;
 
-    // p span {
-    //     display: block;
-    // }
+        @media screen and (max-width: 450px) {
+            text-align: center;
+        }
+    }
 
     button {
         @include button;

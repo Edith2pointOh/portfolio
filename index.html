@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Raleway&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/1712528bbb.js" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Edith's portfolio</title>
 </head>
@@ -16,45 +15,46 @@
     <div class="body-wrapper">
         <header>
 
-            <div>
-                <nav>
-                    <ul>
-                        <li><a class="nav-about" href="">About Me</a></li>
-                        <li><a class="nav-skills" href="">Skills</a></li>
-                        <li><a class="nav-projects" href="">Projects</a></li>
-                        <li><a class="nav-connect" href="">Connect</a></li>
-                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                    </ul>
-                </nav>
-                <div class="header-intro">
-                    <div class="header-text">
-                        <h3> &#60;Hello World /&#62;</h3>
-                        <h1>I'm Edith, <span>Web Developer</span></h1>
-                        <p>And life should be full <span>of pleasant surprises.</span>
-                        </p>
-                        <Button>Resume<i class="fas fa-download"></i></Button>
-                        <Button id="confetti-container" onclick="emit()">Surprise!</Button>
-                    </div>
+
+            <nav>
+                <button class="hamburger" id="hamburger"><i class="fa fa-bars"></i></button>
+                <ul id="nav" class="nav">
+                    <li><a class="nav-about" href="#about">About Me</a></li>
+                    <li><a class="nav-skills" href="#skills">Skills</a></li>
+                    <li><a class="nav-projects" href="#projects">Projects</a></li>
+                    <li><a class="nav-connect" href="#connect">Connect</a></li>
+                </ul>
+
+            </nav>
+            <div class="header-intro">
+                <div class="header-text">
+                    <h3> &#60;Hello World /&#62;</h3>
+                    <h1>I'm Edith, <span>Web Developer</span></h1>
+                    <p>And life should be full <span>of pleasant surprises.</span>
+                    </p>
+                    <Button>Resume<i class="fas fa-download"></i><a href="/asests/Edith-WerbelCV0522pink.pdf"
+                            download></a></Button>
+
+                    <Button id="confetti-container" onclick="emit()">Surprise!</Button>
                 </div>
+            </div>
         </header>
 
         <!-- About me -->
-        <section class="about">
+        <section class="about" id="about">
             <h3>&#60;About Me /&#62;</h3>
             <div class="about-flex-container">
                 <div class="about-me">
-                    <p class="first-para">After a decade in the fitness industy, this gal is making the exciting leap
+                    <p class="first-para">After a decade in the fitness industy, I'm making the exciting leap
                         from corporal to
                         cerebal. But truth is, I've been unskillfully hacking together websites for as long as I can
-                        remember. I've always been drawn to the ingenuity of it all.</p>
+                        remember. I've always been drawn to the ingenuity and creativity of it all.</p>
                     <p>The last few years has seen me hone those skills by taking a variety of coding
                         courses, culimating recently with my completion of Juno College's web development bootcamp. And
                         my taste for learning more can not be quenched. The
                         future is bright and I want to be part of it. </p>
                 </div>
-                <aside class="dotted-line-box-wrapper">
+                <!-- <aside class="dotted-line-box-wrapper">
                     <div class="dotted-line-box">
                         <h5>On the dotted line...</h5>
                         <p>Name: Edith Werbel</p>
@@ -63,7 +63,7 @@
                         <p>Home: Parkdale, Toronto, Canada</p>
                         <p>Likes: Cats, dancing, books & Prince </p>
                     </div>
-                </aside>
+                </aside> -->
             </div>
 
         </section>
@@ -109,7 +109,7 @@
 
         </section> -->
         <!-- banner of skills ie react, sass etc. -->
-        <section class="skillz">
+        <section class="skillz" id="skills">
             <h3>&#60;Skills /&#62;</h3>
             <!-- <div class="skillz-flex"> -->
             <div class="skills-first-row">
@@ -157,8 +157,8 @@
         </section>
 
         <!-- portfolio -->
-        <section class="portfolio-section">
-            <h3>&#60;Portfolio /&#62;</h3>
+        <section class="portfolio-section" id="projects">
+            <h3>&#60;Projects /&#62;</h3>
             <!-- STUDIO FITNESS -->
             <div class="project0">
                 <div class="project0-image">
@@ -174,20 +174,21 @@
                     <h5>Website of Studio Fitness</h5>
                     <p>Official website of Studio Fitness, where clients can book personal training sessions.</p>
                     <p>Wordpress, MindBody Intergration</p>
-                    <button class="portfolio-btn"><a href="http://www.studio-fitness.com/"></a>View
-                        Live</button>
+                    <div class="button-div">
+                        <button class="portfolio-btn"><a href="http://www.studio-fitness.com/"></a>View
+                            Live</button>
+                    </div>
 
                 </div>
             </div>
             <!-- DESKFIT X POMODORO -->
             <div class="project1">
-                <div class="outer-video-div">
-                    <div class="project1-image">
-                        <img src="/asests/DeskFitTablet.png"
-                            alt="an image of the project in question displayed on a TV">
-                        <!-- <i class="far fa-play-circle"></i> -->
-                    </div>
+                <!-- <div class="outer-video-div"> -->
+                <div class="project1-image">
+                    <img src="/asests/DeskFitTablet.png" alt="an image of the project in question displayed on a TV">
+                    <!-- <i class="far fa-play-circle"></i> -->
                 </div>
+                <!-- </div> -->
                 <div class="project1-text">
                     <div class="project1-title-box">
                         <div>
@@ -197,14 +198,18 @@
                     <h5>Solo Jquery project</h5>
                     <p>My pet project. A Pomodoro app that encouages you to move.</p>
                     <p>HTML5, CSS3, JQuery</p>
-                    <button class="portfolio-btn"><a
-                            href="https://traineredith.github.io/edithWerbelProjectThree/">ViewLive</a></button>
-                    <button class="portfolio-btn"><a
-                            href="https://github.com/traineredith/edithWerbelProjectThree">Github</a>
+                    <div class="button-div">
+                        <button class="portfolio-btn"><a
+                                href="https://traineredith.github.io/edithWerbelProjectThree/">ViewLive</a></button>
+                        <button class="portfolio-btn"><a
+                                href="https://github.com/traineredith/edithWerbelProjectThree">Github</a>
 
-                    </button>
-                    <button class="portfolio-btn"><a
-                            href="https://www.loom.com/share/1a808701a57c410fb83e2c91c78b17de"></a>Loom</button>
+                        </button>
+
+                        <!-- <button class="portfolio-btn loom"><a
+                                href="https://www.loom.com/share/1a808701a57c410fb83e2c91c78b17de"></a>Loom</button> -->
+                    </div>
+
                 </div>
             </div>
             <!-- FRIDGE VERSES -->
@@ -222,10 +227,12 @@
                     <h5>Group project with Vincci Tsui, Zarina Mia & George Zikos</h5>
                     <p>A drag and drop game replicating the fun on magnetic poetry.</p>
                     <p>React, Firebase, HTML5, SASS, JavaScript</p>
-                    <button class="portfolio-btn"><a
-                            href=" https://zevg-project6.github.io/Refridgeration-Versification/"></a>View
-                        Live</button>
-                    <button class="portfolio-btn"><a href="https://github.com/ZEVG-project6">Github</a></button>
+                    <div class="button-div">
+                        <button class="portfolio-btn"><a
+                                href=" https://zevg-project6.github.io/Refridgeration-Versification/"></a>View
+                            Live</button>
+                        <button class="portfolio-btn"><a href="https://github.com/ZEVG-project6">Github</a></button>
+                    </div>
                 </div>
             </div>
             <!-- COVID-19 TRACKER -->
@@ -243,9 +250,11 @@
                     <h5>Pair programing project with Nikita Guliaev</h5>
                     <p>A simple app graphing Covid-19 trend globally and nationally.</p>
                     <p>HTML5, API, jQuery, SASS</p>
-                    <button class="portfolio-btn"><a href=" https://nikitaandedith.github.io/Covid-19-Tracker/">View
-                            Live</a></button>
-                    <button class="portfolio-btn"><a href="https://github.com/NikitaAndEdith">Github</a></button>
+                    <div class="button-div">
+                        <button class="portfolio-btn"><a href=" https://nikitaandedith.github.io/Covid-19-Tracker/">View
+                                Live</a></button>
+                        <button class="portfolio-btn"><a href="https://github.com/NikitaAndEdith">Github</a></button>
+                    </div>
                 </div>
             </div>
 
@@ -256,7 +265,7 @@
             <h3>Blog</h3>
         </section> -->
 
-        <section class="connect">
+        <section class="connect" id="connect">
             <h3>&#60;Connect /&#62;</h3>
             <div class="connect-flex">
 
@@ -277,7 +286,7 @@
                                 <i class="far fa-envelope"></i>
                                 <i class="fab fa-medium-m"><a href="https://medium.com/@edithwerbel"></a></i>
                             </div>
-                            <p>edith.werbel@gmail.com</p>
+                            <p></p><a href="mailto:edith.werbel@gmail.com">edith.werbel@gmail.com</a></p>
                             <blockquote class="quote">"It's supposed to be hard. If it wasn't, everyone would do
                                 it. The hard part is what makes it great"</blockquote>
                         </div>
@@ -287,7 +296,7 @@
 
                 </div>
                 <div class="connect-form">
-                    <form action="">
+                    <form action="https://formspree.io/xeqrewnv" method="POST">
                         <div>
                             <label for="name">Your Name</label>
                             <div class=form-name-box-wrapper>
@@ -296,7 +305,7 @@
                         </div>
 
                         <div>
-                            <label for="email">Email</label>
+                            <label for="email">Your Email</label>
                             <div class="form-email-box-wrapper">
                                 <input type="email" name="email" id="email" maxlength="100">
                             </div>
@@ -308,7 +317,7 @@
                                 <textarea name="message" id="message" maxlength="500"></textarea>
                             </div>
                         </div>
-                        <button>send</button>
+                        <button class="form-btn">send</button>
 
 
                     </form>

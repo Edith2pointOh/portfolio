@@ -16,35 +16,88 @@
 }
 
 .about-me {
-    width: 75%;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+
+     @media screen and (max-width: 600px) {
+            text-align: justify;
+            width: 100%;
+        }
+    
+     @media screen and (max-width: 450px) {
+            text-align: left;
+        }
 
     .first-para {
         margin-bottom: 20px;
     }
 }
 
-.dotted-line-box-wrapper {
+.about-me::before {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f10d";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    right: 100%;
+    top: -5%;
+    font-size: 50px;
+    color: $blue;
 
-    position: relative;
-    background: linear-gradient(to bottom right, red, $blue, $yellow);
-    padding: 3px;
-    margin-left: 30px;
+     @media screen and (max-width: 470px) {
+            font-size: 30px;
+        }
+}
 
-    .dotted-line-box {
-    // border: 2px solid red;
-    background: #222;
-    color: white;
-    padding: 30px;
-    margin: 0 auto;
+.about-me::after {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f10e";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    left: 100%;
+    bottom: -7%;
+    font-size: 50px;
+    color: $blue;
+
+    @media screen and (max-width: 470px) {
+            font-size: 30px;
+            left: 90%;
+        }
+}
+
+// .dotted-line-box-wrapper {
+
+//     position: relative;
+//     background: linear-gradient(to bottom right, red, $blue, $yellow);
+//     padding: 3px;
+//     margin-left: 30px;
+
+//     .dotted-line-box {
+//     // border: 2px solid red;
+//     background: #222;
+//     color: white;
+//     padding: 30px;
+//     margin: 0 auto;
     
 
-    h5 {
-        text-align: left;
-        margin-bottom: .2rem;
-    }
-}
+//     h5 {
+//         text-align: left;
+//         margin-bottom: .2rem;
+//     }
+// }
 
-}
+// }
 
 // UNUSED STUDIES AREA, MIGHT INCORPORATE LATER
 
@@ -151,32 +204,58 @@
 
 .skillz-icons {
     height: 100%;
+    width: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
     margin-bottom: 5px;
-
+   
      img {
         height: 100px;
+
+            @media screen and (max-width: 972px) {
+             height: 75px;
+         }
+
+         @media screen and (max-width: 550px) {
+            height: 60px
+           
+        }
+        
     }
 
-    p {
+    h5 {
         margin: 5px 0 0 0;
-        font-weight: bolder;
         color: white;
 
+        @media screen and (max-width: 550px) {
+        font-size: 10px;
+        }
     }
 }
 
-
+// PROJECTS
 
 .project0 {
     display: flex;
     align-items: center;
     width: 100%;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 972px) {
+        flex-direction: column;
+    }
 
     .project0-image {
         width: 50%;
+
+        @media screen and (max-width: 972px) {
+            width: 80%;
+        }
+
+        @media screen and (max-width: 600px) {
+            width: 100%;
+        }
 
             img {
                 width: 100%;
@@ -188,6 +267,10 @@
             width: 50%;
             justify-self: center;
             align-items: center;
+
+            @media screen and (max-width: 972px) {
+                width: 100%;
+            }
 
             .project0-title-box {
                 position: relative;
@@ -233,32 +316,48 @@
     display: flex;
     align-items: center;
     width: 100%;
+    margin-bottom: 30px;
 
-    .outer-video-div {
-        position: relative;
-        width: 50%;
-        height: auto;
-
-        .project1-image img {
-            width: 100%;
-            height: auto;
-        }
-
-        .project1-image i {
-            font-size: 350%;
-            position: absolute;
-            bottom: 30%;
-            left: 70%;
-            color: $pink;
-            // @include dropShadow();
-            // @include pulse;
-        }
+     @media screen and (max-width: 972px) {
+        flex-direction: column;
     }
+
+        .project1-image {
+        width: 50%;
+
+         @media screen and (max-width: 9720px) {
+            width: 80%;
+        }
+
+         @media screen and (max-width: 600px) {
+            width: 100%;
+        }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+
+        // .project1-image i {
+        //     font-size: 350%;
+        //     position: absolute;
+        //     bottom: 30%;
+        //     left: 70%;
+        //     color: $pink;
+           
+        // }
+    // }
 
     .project1-text {
         width: 50%;
         justify-self: center;
         align-items: center;
+
+        @media screen and (max-width: 972px) {
+            width: 100%;
+        }
 
         .project1-title-box {
             position: relative;
@@ -298,14 +397,45 @@
         }  
     }
 }
+
+ @media screen and (max-width: 450px) {
+
+    .loom {
+        display: none;
+    }
+       
+}
+
+ @media screen and (max-width: 450px) {
+
+            .button-div {
+              display: flex;
+              justify-content: center;
+            }
+        }
+
+
 // fridge
 .project2 {
     display: flex;
     align-items: center;
     width: 100%;
+    margin-bottom: 30px;
+
+     @media screen and (max-width: 972px) {
+        flex-direction: column;
+    }
 
     .project2-image {
         width: 50%;
+
+        @media screen and (max-width: 972px) {
+            width: 80%;
+        }
+
+         @media screen and (max-width: 600px) {
+            width: 100%;
+        }
 
             img {
                 width: 100%;
@@ -317,6 +447,13 @@
             width: 50%;
             justify-self: center;
             align-items: center;
+
+            @media screen and (max-width: 972px) {
+            width: 100%;
+            flex-direction: column;
+        }
+
+        
 
             .project2-title-box {
                 position: relative;
@@ -362,10 +499,23 @@
     display: flex;
     align-items: center;
     width: 100%;
+    margin-bottom: 30px;
+
+     @media screen and (max-width: 972px) {
+        flex-direction: column;
+    }
 
     .project3-image {
         width: 50%;
 
+        @media screen and (max-width: 972px) {
+            width: 80%;
+            margin-top: 20px;
+        }
+
+         @media screen and (max-width: 600px) {
+            width: 100%;
+        }
             img {
                 width: 100%;
                 height: auto;
@@ -376,6 +526,10 @@
         width: 50%;
         justify-self: center;
         align-items: center;
+
+        @media screen and (max-width: 972px) {
+            width: 100%;
+        }
 
         .project3-title-box {
             position: relative;
@@ -417,7 +571,14 @@
 }
 
 .project2-image, .project0-image {
-    order: 1;
+    order: 1;   
+}
+
+.project3-image, .project1-image {
+
+    @media screen and (max-width: 972px) {
+        order: 1;
+    }
 }
 
 // .project2-text, .project0-text {
@@ -445,6 +606,11 @@
 .connect-flex{
     display: flex;
     align-content: space-between;
+
+    @media screen and (max-width: 972px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .social-flex {
@@ -455,6 +621,12 @@
     position: relative;
     background: linear-gradient(to bottom right, red, $blue, $yellow);    
     padding: 3px;
+
+    @media screen and (max-width: 972px) {
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
 
     div {
         display: flex;
@@ -469,6 +641,11 @@
 
     .circle-pic-div {
         width: 50%;
+       
+
+        @media screen and (max-width: 450px) {
+            display: none;
+        }
 
         img {
             max-width: 100%;
@@ -483,6 +660,14 @@
         flex-direction: column;
         justify-content: space-between;
         text-align: center;
+
+        @media screen and (max-width: 972px) {
+            width: 75%;
+        }
+
+         @media screen and (max-width: 450px) {
+            width: 100%;
+        }
 
         .social-icons {
             justify-content: space-between;
@@ -504,6 +689,10 @@
             font-style: italic;
             margin-top: 8px;
             font-size: 15px;
+
+            @media screen and (max-width: 600px) {
+                display: none;
+            }
         }
     }
 }
@@ -528,8 +717,12 @@
 
 
 .connect-form {
-    max-width: 50%;
+    // max-width: 50%;
     width: 50%;
+
+    @media screen and (max-width: 972px) {
+        width: 100%;
+        }
 
     button {
         display: block;
@@ -552,6 +745,14 @@
         padding:10px;
         font-family: 'Raleway', sans-serif;
     }
+}
+
+input:focus, textarea:focus {
+     box-shadow: 0 0 10px rgba(238, 145, 222, 1);
+}
+
+.form-btn:hover {
+    box-shadow: 0 0 5px rgba(238, 145, 222, 1);
 }
 
 footer {
