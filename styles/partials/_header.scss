@@ -3,7 +3,7 @@ header {
     min-height: 600px;
     max-height: 800px;
     margin: 0 auto;
-    background-image: url('../../asests/hero.jpg');
+    background-image: url('../../asests/hero2.1.jpg');
     background-position: center top;
     background-repeat: no-repeat;
     background-size: fit;
@@ -113,10 +113,15 @@ nav {
     h3 {
         text-align: left;
         margin-bottom: 20px;
+        text-shadow: 1px 1px #222;
 
         @media screen and (max-width: 450px) {
             text-align: center;
         }
+    }
+
+    p {
+        text-shadow: 1px 1px #222;
     }
 
     button {
