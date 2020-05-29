@@ -566,6 +566,10 @@
     }
 }
 
+.social-icons a:focus {
+    outline: none;
+}
+
 .email {
     text-align: center;
     padding-top: 15px;
