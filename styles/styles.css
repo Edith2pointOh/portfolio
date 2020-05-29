@@ -1296,6 +1296,7 @@ nav {
 input:focus, textarea:focus {
   -webkit-box-shadow: 0 0 10px #ee91de;
           box-shadow: 0 0 10px #ee91de;
+  color: white;
 }
 
 .form-btn:hover {
